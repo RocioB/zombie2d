@@ -10,7 +10,7 @@ public class bala : MonoBehaviour {
 	}
 
 		void OnCollisionEnter2D(Collision2D target) {
-		Destroy (gameObject);
+		onDestroy ();
 	}
 
 	void onDestroy () {
