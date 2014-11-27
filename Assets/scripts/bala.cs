@@ -14,10 +14,10 @@ public class bala : MonoBehaviour {
 	}
 
 	void onDestroy () {
-				var clone = Instantiate (particulas, transform.position, Quaternion.identity)
+		var clone = Instantiate (particulas, transform.position, Quaternion.identity)
 			as GameObject;
-				Destroy (clone, 1);
-				Destroy (gameObject);
+		Destroy (clone, 1);
+
 		}
 	
 
