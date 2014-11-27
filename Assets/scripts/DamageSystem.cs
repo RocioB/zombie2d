@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -9,20 +9,27 @@ public class DamageSystem : MonoBehaviour {
 	public RectTransform livebar;
 	
 	private float rectLive; 
+	private int maxLive;
 	
 	// Use this for initialization
 	void Start () {
 		if(livebar!=null){
 			rectLive = livebar.rect.width / live;
 		}
+		maxLive = live;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(live <=0){
-			muerte();
+		
+		if (live <= 0) {
+			muerte ();
+		}
+		if (live > maxLive) {
+			live = maxLive;
 		}
 	}
+
 	
 	public void hurt(int damage){
 		live = live - damage;
